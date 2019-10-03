@@ -117,6 +117,9 @@ typedef enum
 
 #define I2C1_SLAVE_DEFAULT_ADDRESS          99
 
+
+uint8_t read_Data_Memory(uint8_t adress);
+void write_Data_Memory(uint8_t adress , uint8_t data);
 /**
     @Summary
         Initializes and enables the i2c slave instance : 1
@@ -477,6 +480,8 @@ uint8_t *I2C1_WritePointerGet(void);
         </code>
 
  */
+
+
 
 #pragma message "I2C1_StatusCallback() is an Application implemented function. If this function is already implemented, you can turn off this message by deleting or commenting out this message."
 bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status);

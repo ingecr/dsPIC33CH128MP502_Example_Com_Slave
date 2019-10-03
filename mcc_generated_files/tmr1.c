@@ -50,6 +50,7 @@
 #include <stdio.h>
 #include "tmr1.h"
 #include "master.h"
+#include "i2c1.h"
 
 /**
  Section: File specific functions
@@ -162,8 +163,8 @@ void __attribute__ ((weak)) TMR1_CallBack(void)
 {
     // Add your custom callback code here
     
-   /* ProtocolA_DATA dataSend;
-    dataSend.ProtocolA[0] = TMR1_SoftwareCounterGet();                      //Initializing to known value.
+    ProtocolA_DATA dataSend;
+    dataSend.ProtocolA[0] = read_Data_Memory(3);                      //Initializing to known value.
  
     //Mailbox write 
     MASTER_ProtocolAWrite((ProtocolA_DATA*)&dataSend);
@@ -172,7 +173,7 @@ void __attribute__ ((weak)) TMR1_CallBack(void)
     MASTER_InterruptRequestGenerate();
     while(!MASTER_IsInterruptRequestAcknowledged());
     MASTER_InterruptRequestComplete();
-    while(MASTER_IsInterruptRequestAcknowledged());*/
+    while(MASTER_IsInterruptRequestAcknowledged());
 }
 
 void  TMR1_SetInterruptHandler(void (* InterruptHandler)(void))

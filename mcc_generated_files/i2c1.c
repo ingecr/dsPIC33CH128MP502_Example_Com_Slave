@@ -114,6 +114,19 @@ static I2C_SLAVE_STATES   i2c1_slave_state;
 static uint8_t            *p_i2c1_write_pointer;
 static uint8_t            *p_i2c1_read_pointer;
 
+    static uint8_t EMULATE_EEPROM_Memory[EMULATE_EEPROM_SIZE] =
+            {
+                0x01, 0x02, 0x03, 0x04, 0x05
+            };
+
+    uint8_t read_Data_Memory(uint8_t adress)
+    {
+        return EMULATE_EEPROM_Memory[adress];
+    }
+    void write_Data_Memory(uint8_t adress , uint8_t data)
+    {
+        EMULATE_EEPROM_Memory[adress] = data;
+    }
 /**
   Prototype:        void I2C1_Initialize(void)
   Input:            none
@@ -478,10 +491,7 @@ bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status)
     
 
     
-    static uint8_t EMULATE_EEPROM_Memory[EMULATE_EEPROM_SIZE] =
-            {
-                0x01, 0x02, 0x03, 0x04, 0x05
-            };
+
 
     static uint16_t address, addrByteCount;
     static bool     addressState = true;
@@ -514,16 +524,19 @@ bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status)
                 // get the address of the memory being written
                 if (addrByteCount == 0)
                 {
-                    address = (i2c1_slaveWriteData << 8) & 0xFF00;
-                    addrByteCount++;
+                    //address = (i2c1_slaveWriteData << 8) & 0xFF00;
+                    //addrByteCount++;
+                    address = i2c1_slaveWriteData;
+                    addrByteCount = 0;
+                    addressState = false;
                 }
-                else if (addrByteCount == 1)
+                /*else if (addrByteCount == 1)
                 {
                     address = (address | i2c1_slaveWriteData );
                     addrByteCount = 0;
                     addressState = false;
                     
-                }
+                }*/
                 
                 if(address >= EMULATE_EEPROM_SIZE) {
                     address = EMULATE_EEPROM_SIZE;
