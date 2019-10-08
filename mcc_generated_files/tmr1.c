@@ -51,6 +51,7 @@
 #include "tmr1.h"
 #include "master.h"
 #include "i2c1.h"
+#include "pin_manager.h"
 
 /**
  Section: File specific functions
@@ -94,10 +95,10 @@ void TMR1_Initialize (void)
 {
     //TMR 0; 
     TMR1 = 0x00;
-    //Period = 0.8 s; Frequency = 4000000 Hz; PR 49999; 
-    PR1 = 0xC34F;
-    //TCKPS 1:64; PRWIP Write complete; TMWIP Write complete; TON enabled; TSIDL disabled; TCS FOSC/2; TECS T1CK; TSYNC disabled; TMWDIS disabled; TGATE disabled; 
-    T1CON = 0x8020;
+    //Period = 0.2000008533 s; Frequency = 75000000 Hz; PR 58593; 
+    PR1 = 0xE4E1;
+    //TCKPS 1:256; PRWIP Write complete; TMWIP Write complete; TON enabled; TSIDL disabled; TCS FOSC/2; TECS T1CK; TSYNC disabled; TMWDIS disabled; TGATE disabled; 
+    T1CON = 0x8030;
 
     if(TMR1_InterruptHandler == NULL)
     {
@@ -162,9 +163,11 @@ uint16_t TMR1_Counter16BitGet( void )
 void __attribute__ ((weak)) TMR1_CallBack(void)
 {
     // Add your custom callback code here
-    
+    LED4_Toggle();
     ProtocolA_DATA dataSend;
-    dataSend.ProtocolA[0] = read_Data_Memory(3);                      //Initializing to known value.
+    dataSend.ProtocolA[0] = (uint16_t)read_Data_Memory(0) + ((uint16_t)read_Data_Memory(1) << 8);     
+    dataSend.ProtocolA[1] = (uint16_t)read_Data_Memory(2) + ((uint16_t)read_Data_Memory(3) << 8); 
+    dataSend.ProtocolA[2] = (uint16_t)read_Data_Memory(4) + ((uint16_t)read_Data_Memory(5) << 8); 
  
     //Mailbox write 
     MASTER_ProtocolAWrite((ProtocolA_DATA*)&dataSend);
@@ -174,6 +177,7 @@ void __attribute__ ((weak)) TMR1_CallBack(void)
     while(!MASTER_IsInterruptRequestAcknowledged());
     MASTER_InterruptRequestComplete();
     while(MASTER_IsInterruptRequestAcknowledged());
+    
 }
 
 void  TMR1_SetInterruptHandler(void (* InterruptHandler)(void))

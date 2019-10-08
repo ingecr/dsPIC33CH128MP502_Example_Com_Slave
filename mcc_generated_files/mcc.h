@@ -52,17 +52,17 @@
 #include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
+#include "master.h"
+#include "reset.h"
 #include "interrupt_manager.h"
 #include "traps.h"
-#include "i2c1.h"
-#include "tmr1.h"
-#include "master.h"
 #include "watchdog.h"
+#include "tmr1.h"
+#include "i2c1.h"
 #include "delay.h"
-#include "reset.h"
 
 #ifndef _XTAL_FREQ
-#define _XTAL_FREQ  8000000UL
+#define _XTAL_FREQ  150000000UL
 #endif
 #define WDT_CLR_KEY 0x5743
 

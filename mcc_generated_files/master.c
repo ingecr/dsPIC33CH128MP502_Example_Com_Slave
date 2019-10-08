@@ -171,6 +171,8 @@ bool MASTER_ProtocolAWrite(ProtocolA_DATA *pData)
     if(MASTER_ProtocolAIsEmpty())
     {
         SI1MBX0D = pData->ProtocolA[0];
+        SI1MBX1D = pData->ProtocolA[1];
+        SI1MBX2D = pData->ProtocolA[2];
 
         status = true;
     }	

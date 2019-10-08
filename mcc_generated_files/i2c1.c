@@ -98,7 +98,7 @@ typedef enum
 #define I2C1_GENERAL_CALL_ADDRESS_STATUS_BIT    I2C1STATbits.GCSTAT	// I2C General Call status bit.
 #define I2C1_ACKNOWLEDGE_STATUS_BIT             I2C1STATbits.ACKSTAT	// I2C ACK status bit.
 
-#define EMULATE_EEPROM_SIZE                     5
+#define EMULATE_EEPROM_SIZE                     6
 /**
  Section: Local Functions
 */
@@ -116,7 +116,7 @@ static uint8_t            *p_i2c1_read_pointer;
 
     static uint8_t EMULATE_EEPROM_Memory[EMULATE_EEPROM_SIZE] =
             {
-                0x01, 0x02, 0x03, 0x04, 0x05
+                0x01, 0x02, 0x03, 0x04, 0x05 , 0x06
             };
 
     uint8_t read_Data_Memory(uint8_t adress)

@@ -92,7 +92,7 @@ typedef enum
 
 typedef struct ProtocolA_DATA_STRUCT
 {
-    uint16_t    ProtocolA[1];
+    uint16_t    ProtocolA[3];
 
 } ProtocolA_DATA; 
 
