@@ -53,7 +53,7 @@ int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
- 
+    
   
     ProtocolA_DATA dataSend;
  

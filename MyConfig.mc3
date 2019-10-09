@@ -1,12 +1,12 @@
 <config configVersion="1.1" device="dsPIC33CH128MP508S1" coreVersion="4.75">
    <usedClasses class="java.util.HashMap">
       <entry>
-         <string>MSI</string>
-         <string>class com.microchip.mcc.mcu16.modules.msi_slave.MSI</string>
-      </entry>
-      <entry>
          <string>Main Manager</string>
          <string>class com.microchip.mcc.mcu16.mainManager.MainManager</string>
+      </entry>
+      <entry>
+         <string>MSI</string>
+         <string>class com.microchip.mcc.mcu16.modules.msi_slave.MSI</string>
       </entry>
       <entry>
          <string>WATCHDOG</string>
@@ -21,12 +21,12 @@
          <string>class com.microchip.mcc.mcu16.modules.slave_core_internal_oscillator.SlaveCoreInternalOscillator</string>
       </entry>
       <entry>
-         <string>ICD</string>
-         <string>class com.microchip.mcc.mcu16.systemManager.icd.Icd</string>
-      </entry>
-      <entry>
          <string>RESET</string>
          <string>class com.microchip.mcc.mcu16.systemManager.reset.RESET</string>
+      </entry>
+      <entry>
+         <string>ICD</string>
+         <string>class com.microchip.mcc.mcu16.systemManager.icd.Icd</string>
       </entry>
       <entry>
          <string>Interrupt Module</string>
@@ -547,20 +547,20 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSI" registerAlias="SIMBX3D" settingAlias="SIMBX3D"/>
-         <value>0</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="PLLFBD" settingAlias="PLLDIV" alias="130"/>
          <value>130</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSI" registerAlias="MSIC" settingAlias="flag"/>
-         <value>disabled</value>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSI" registerAlias="SIMBX3D" settingAlias="SIMBX3D"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="PLLFBD" settingAlias="PLLDIV" alias="131"/>
          <value>131</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSI" registerAlias="MSIC" settingAlias="flag"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="iocUserSet RC0"/>
@@ -979,12 +979,12 @@
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSI" registerAlias="SICON" settingAlias="RFITSEL" alias="Trigger data valid interrupt when FIFO is 50% full after Slave write"/>
-         <value>1</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="REFCLKOUT_ROSEL"/>
          <value>FOSC</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSI" registerAlias="SICON" settingAlias="RFITSEL" alias="Trigger data valid interrupt when FIFO is 50% full after Slave write"/>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="CNEN1E" settingAlias="CNIE1E2"/>
@@ -1424,7 +1424,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="total Buffer Used"/>
-         <value>6</value>
+         <value>2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="TRISD" settingAlias="TRISD14" alias="input"/>
@@ -2039,12 +2039,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SLAVE INTERNAL OSCILLATOR" name="customSlaveContextData"/>
-         <value>S1CTXT3:OFF,S1CTXT4:OFF,S1CTXT1:OFF,S1CTXT2:OFF,</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="APLLDIV1" settingAlias="AVCODIV" alias="FVCO/3"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SLAVE INTERNAL OSCILLATOR" name="customSlaveContextData"/>
+         <value>S1CTXT3:OFF,S1CTXT4:OFF,S1CTXT1:OFF,S1CTXT2:OFF,</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="TRISD" settingAlias="TRISD8" alias="output"/>
@@ -2239,12 +2239,12 @@
          <value>104</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSI" registerAlias="MSIFLT" settingAlias="flag"/>
-         <value>disabled</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="PLLFBD" settingAlias="PLLDIV" alias="105"/>
          <value>105</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSI" registerAlias="MSIFLT" settingAlias="flag"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="PLLFBD" settingAlias="PLLDIV" alias="106"/>
@@ -3399,12 +3399,12 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="MSI_MSTRSTISRFunction"/>
-         <value>ISR_MSI_MSTRST</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON" settingAlias="COSC" alias="BFRC"/>
          <value>6</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="MSI_MSTRSTISRFunction"/>
+         <value>ISR_MSI_MSTRST</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="LATB" settingAlias="LATB5" alias="set"/>
@@ -4491,12 +4491,12 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="MSI" registerAlias="SIMBX2D"/>
-         <value>0</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="CLKDIV" settingAlias="PLLPRE"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="MSI" registerAlias="SIMBX2D"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="CNSTATC" settingAlias="CNSTATC4" alias="enabled"/>
@@ -4580,7 +4580,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="bufferSize A"/>
-         <value>6</value>
+         <value>2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="TRISC" settingAlias="TRISC6"/>
@@ -6560,7 +6560,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="Slave Disable"/>
-         <value>enabled</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="anselUserSetRB8"/>
@@ -7215,12 +7215,12 @@
          <value>32768</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SLAVE INTERNAL OSCILLATOR" name="ClockSwitching"/>
-         <value>enabled</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="RESET" registerAlias="RCON" settingAlias="BOR" alias="disabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SLAVE INTERNAL OSCILLATOR" name="ClockSwitching"/>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SLAVE WATCHDOG" name="customWDTCLK"/>
@@ -8200,7 +8200,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SLAVE INTERNAL OSCILLATOR" name="FailSafe"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="CNEN1A" settingAlias="CNIE1A1" alias="enabled"/>
@@ -8319,12 +8319,12 @@
          <value>ProtocolC</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="customName B"/>
-         <value>ProtocolB</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="WATCHDOG" name="ClockInput"/>
          <value>32000</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="customName B"/>
+         <value>ProtocolB</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="CNAI" settingAlias="priority"/>
@@ -8347,16 +8347,16 @@
          <value>ProtocolE</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="customName D"/>
-         <value>ProtocolD</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="APLLFBD1" settingAlias="APLLFBDIV"/>
          <value>150</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ICD" name="customICS"/>
          <value>Communicate on PGC3 and PGD3</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="customName D"/>
+         <value>ProtocolD</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="CNPUD" settingAlias="CNPUD3"/>
@@ -8839,12 +8839,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSI" registerAlias="MSIM" settingAlias="enable"/>
-         <value>disabled</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="PMD8" settingAlias="PGA2MD" alias="disabled"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSI" registerAlias="MSIM" settingAlias="enable"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="ioc VDD3A"/>
@@ -9036,7 +9036,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SLAVE WATCHDOG" name="customWDTPS"/>
-         <value>1:1048576</value>
+         <value>1:512</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSI" registerAlias="MSIG" settingAlias="priority"/>
@@ -9655,12 +9655,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SLAVE WATCHDOG" name="customFWPSA"/>
-         <value>NA</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="REFOCONL" settingAlias="ROSEL" alias="FOSC"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SLAVE WATCHDOG" name="customFWPSA"/>
+         <value>NA</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="TRISE" settingAlias="TRISE15" alias="input"/>
@@ -10496,7 +10496,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="WATCHDOG" name="customWDTPS"/>
-         <value>1:1048576</value>
+         <value>1:512</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ODCC" settingAlias="ODCC0"/>
@@ -10587,12 +10587,12 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSI" registerAlias="MSIH" settingAlias="enable"/>
-         <value>disabled</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="APLLFBD1" settingAlias="APLLFBDIV" alias="68"/>
          <value>68</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSI" registerAlias="MSIH" settingAlias="enable"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="APLLFBD1" settingAlias="APLLFBDIV" alias="69"/>
@@ -11372,7 +11372,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="WATCHDOG" name="TimerPeriod"/>
-         <value>1048.576s</value>
+         <value>512.000ms</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="PMD8" settingAlias="PGA2MD"/>
@@ -11571,16 +11571,16 @@
          <value>26</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSI" registerAlias="MSIM" settingAlias="flag"/>
-         <value>disabled</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="RPCON" settingAlias="IOLOCK" alias="enabled"/>
          <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="PLLFBD" settingAlias="PLLDIV" alias="27"/>
          <value>27</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSI" registerAlias="MSIM" settingAlias="flag"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="PLLFBD" settingAlias="PLLDIV" alias="28"/>
@@ -12340,7 +12340,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="available Buffer"/>
-         <value>26</value>
+         <value>30</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR1" registerAlias="TCON" settingAlias="TMWIP" alias="Write pending"/>
@@ -14204,7 +14204,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="FailSafe"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="CNSTATE" settingAlias="CNSTATE15" alias="disabled"/>
@@ -14727,12 +14727,12 @@
          <value>154</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="MSI" registerAlias="SIMBX7D"/>
-         <value>0</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="APLLFBD1" settingAlias="APLLFBDIV" alias="155"/>
          <value>155</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="MSI" registerAlias="SIMBX7D"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="RPOR7" settingAlias="RP47R"/>
@@ -14783,12 +14783,12 @@
          <value>16 Bit</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SLAVE WATCHDOG" name="customMSlaveWDTViewReinit"/>
-         <value>enabled</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="APLLFBD1" settingAlias="APLLFBDIV" alias="161"/>
          <value>161</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SLAVE WATCHDOG" name="customMSlaveWDTViewReinit"/>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="APLLFBD1" settingAlias="APLLFBDIV" alias="162"/>
@@ -14799,12 +14799,12 @@
          <value>167</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="MSI" registerAlias="SIMBX12D"/>
-         <value>0</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="APLLFBD1" settingAlias="APLLFBDIV" alias="168"/>
          <value>168</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="MSI" registerAlias="SIMBX12D"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="APLLFBD1" settingAlias="APLLFBDIV" alias="165"/>
@@ -15309,12 +15309,12 @@
    </tokenMap>
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
-         <file>mcc_generated_files\master.h</file>
-         <hash>22186d780a2d59d0826429e98800c317fd50ac4bf3ff9497a9e2565d9bc5c3ec</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\interrupt_manager.h</file>
          <hash>4d77fa4c18b7950ba78645935d538f50812167841471579dcd271d2d3f00c891</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\master.h</file>
+         <hash>bbed2da17ccdb91def3305ff29d6dcae5fc0856b78dd2a08636b64e47920238a</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\i2c1.c</file>
@@ -15342,7 +15342,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\system.c</file>
-         <hash>6be0e75216d1aadbce30ad0a2840983b447aaa323c8432a4cfd7151fb689497b</hash>
+         <hash>de4cd09e439e7738846fdeabe4dba657152f25cf66ccbd4aa682b5fb7078de48</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\clock.h</file>
@@ -15358,7 +15358,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.h</file>
-         <hash>95bad4cfa5fbd0e6c02efcdb6f7e58a61733b1231497024ec41400eb3ac872aa</hash>
+         <hash>47e5e86db4123216c156d53f1552a2c82c5774eb1b6d8866932883bfbe30070d</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\reset.c</file>
@@ -15401,12 +15401,12 @@
          <hash>cdd097b063d665df9d479ae8b59c0b3fcc4b07e90071ba40e50c6d74fbc674a6</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\master.c</file>
-         <hash>a17f2a2fa5fdc844ce8818e63ecffd46f76a47369e52bd6e34a09196b8b15160</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\watchdog.h</file>
          <hash>1be87335033501e36dd403edc17ba9f58be407d2e7eef89677c2f5b36a74ad5f</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\master.c</file>
+         <hash>cda8d9d27f3423f893298d05bbcb6801fc0ce9fb3619ef98aa872f08e073b783</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\reset_types.h</file>

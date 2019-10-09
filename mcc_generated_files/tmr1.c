@@ -163,11 +163,11 @@ uint16_t TMR1_Counter16BitGet( void )
 void __attribute__ ((weak)) TMR1_CallBack(void)
 {
     // Add your custom callback code here
-    LED4_Toggle();
+    //LED4_Toggle();
     ProtocolA_DATA dataSend;
-    dataSend.ProtocolA[0] = (uint16_t)read_Data_Memory(0) + ((uint16_t)read_Data_Memory(1) << 8);     
-    dataSend.ProtocolA[1] = (uint16_t)read_Data_Memory(2) + ((uint16_t)read_Data_Memory(3) << 8); 
-    dataSend.ProtocolA[2] = (uint16_t)read_Data_Memory(4) + ((uint16_t)read_Data_Memory(5) << 8); 
+    dataSend.ProtocolA[0] = read_Data_Memory(0);     
+    //dataSend.ProtocolA[1] = (uint16_t)read_Data_Memory(2) + ((uint16_t)read_Data_Memory(3) << 8); 
+    //dataSend.ProtocolA[2] = (uint16_t)read_Data_Memory(4) + ((uint16_t)read_Data_Memory(5) << 8); 
  
     //Mailbox write 
     MASTER_ProtocolAWrite((ProtocolA_DATA*)&dataSend);

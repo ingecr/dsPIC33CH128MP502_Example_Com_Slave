@@ -47,6 +47,7 @@
 #include "i2c1.h"
 #include "pin_manager.h"
 #include "master.h"
+#include "watchdog.h"
 
 ProtocolA_DATA dataSend;
 
@@ -495,6 +496,8 @@ bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status)
 
     static uint16_t address, addrByteCount;
     static bool     addressState = true;
+    LED4_Toggle();
+    WATCHDOG_TimerClear();
 
     switch (status)
     {

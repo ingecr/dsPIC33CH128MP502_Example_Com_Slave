@@ -46,12 +46,13 @@
 #include "clock.h"
 #include "system.h"
 #include "system_types.h"
-#include "master.h"
-#include "interrupt_manager.h"
-#include "traps.h"
 #include "tmr1.h"
 #include "i2c1.h"
+#include "interrupt_manager.h"
+#include "traps.h"
 #include "delay.h"
+#include "master.h"
+#include "watchdog.h"
 
 void SYSTEM_Initialize(void)
 {
@@ -63,6 +64,8 @@ void SYSTEM_Initialize(void)
     TMR1_Initialize();
     INTERRUPT_GlobalEnable();
     SYSTEM_CORCONModeOperatingSet(CORCON_MODE_PORVALUES);
+    WATCHDOG_TimerSoftwareEnable();
+   
 }
 
 /**
