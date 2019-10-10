@@ -55,6 +55,9 @@ void INTERRUPT_Initialize (void)
     //    MSIA: MSI Protocol A
     //    Priority: 1
         IPC32bits.MSIAIP = 1;
+    //    MSIB: MSI Protocol B
+    //    Priority: 1
+        IPC32bits.MSIBIP = 1;
     //    MICI: I2C1 Master Event
     //    Priority: 1
         IPC4bits.MI2C1IP = 1;

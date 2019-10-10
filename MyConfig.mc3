@@ -1,20 +1,20 @@
 <config configVersion="1.1" device="dsPIC33CH128MP508S1" coreVersion="4.75">
    <usedClasses class="java.util.HashMap">
       <entry>
-         <string>Main Manager</string>
-         <string>class com.microchip.mcc.mcu16.mainManager.MainManager</string>
-      </entry>
-      <entry>
          <string>MSI</string>
          <string>class com.microchip.mcc.mcu16.modules.msi_slave.MSI</string>
       </entry>
       <entry>
-         <string>WATCHDOG</string>
-         <string>class com.microchip.mcc.mcu16.systemManager.wdt.Wdt</string>
+         <string>Main Manager</string>
+         <string>class com.microchip.mcc.mcu16.mainManager.MainManager</string>
       </entry>
       <entry>
          <string>Pin Module</string>
          <string>class com.microchip.mcc.mcu16.pinManager.PinManager</string>
+      </entry>
+      <entry>
+         <string>WATCHDOG</string>
+         <string>class com.microchip.mcc.mcu16.systemManager.wdt.Wdt</string>
       </entry>
       <entry>
          <string>SLAVE INTERNAL OSCILLATOR</string>
@@ -512,7 +512,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="Custom HSBEN"/>
-         <value>OFF</value>
+         <value>ON</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="CNSTATD" settingAlias="CNSTATD13"/>
@@ -1424,7 +1424,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="total Buffer Used"/>
-         <value>2</value>
+         <value>8</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="TRISD" settingAlias="TRISD14" alias="input"/>
@@ -1600,7 +1600,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="direction B"/>
-         <value>S-&gt;M</value>
+         <value>M-&gt;S</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="CNEN0B" settingAlias="CNIE0B13" alias="enabled"/>
@@ -3840,7 +3840,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSI" registerAlias="MSIB" settingAlias="enable"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="trisUserSetRE6"/>
@@ -4176,7 +4176,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RE4"/>
-         <value>disabled</value>
+         <value>output</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RE3"/>
@@ -4456,7 +4456,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="TRISE"/>
-         <value>65533</value>
+         <value>65517</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name VDD1A"/>
@@ -4576,7 +4576,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="bufferSize B"/>
-         <value>0</value>
+         <value>6</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="bufferSize A"/>
@@ -7016,7 +7016,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="customNameUserSet RE4"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="customNameUserSet RE5"/>
@@ -9308,7 +9308,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="TRISE" settingAlias="TRISE4"/>
-         <value>input</value>
+         <value>output</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="FeatureClockSource"/>
@@ -12340,7 +12340,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="available Buffer"/>
-         <value>30</value>
+         <value>24</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR1" registerAlias="TCON" settingAlias="TMWIP" alias="Write pending"/>
@@ -13516,7 +13516,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RE4"/>
-         <value/>
+         <value>LED7</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="CNEN0C" settingAlias="CNIE0C8" alias="disabled"/>
@@ -15314,7 +15314,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\master.h</file>
-         <hash>bbed2da17ccdb91def3305ff29d6dcae5fc0856b78dd2a08636b64e47920238a</hash>
+         <hash>32c5d491666f0021b62b04e5cffb82817e42715303c2e5809f14161ad559d1d1</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\i2c1.c</file>
@@ -15337,12 +15337,12 @@
          <hash>172333cca6903e06790f8e616fc5c9e7e729276d4ac97493289ae3a8f248a464</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\delay.h</file>
-         <hash>bcdb6d54c3b91590cc267f1d1ffcc0baeb4ad72a3ef69dcb8de17fbeafe73f61</hash>
+         <file>mcc_generated_files\system.c</file>
+         <hash>14ed8385601c4e843400c7ab657a09ecb600c43fad69507b350744fad8582422</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\system.c</file>
-         <hash>de4cd09e439e7738846fdeabe4dba657152f25cf66ccbd4aa682b5fb7078de48</hash>
+         <file>mcc_generated_files\delay.h</file>
+         <hash>bcdb6d54c3b91590cc267f1d1ffcc0baeb4ad72a3ef69dcb8de17fbeafe73f61</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\clock.h</file>
@@ -15358,7 +15358,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.h</file>
-         <hash>47e5e86db4123216c156d53f1552a2c82c5774eb1b6d8866932883bfbe30070d</hash>
+         <hash>a5df31b3a1809462945267b8a2e3996b25b6753604b50a1915badc71a1d33009</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\reset.c</file>
@@ -15378,7 +15378,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.h</file>
-         <hash>da7507b5312ce175a70ac049b421b2dfb896d648c2f66ad0a3e77d473b3b0935</hash>
+         <hash>781c64aa86552b9f7d47dd7979685baa0e49b03687d08635ed1442a01e92a6e7</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\tmr1.c</file>
@@ -15386,7 +15386,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>
-         <hash>543629e7c8f461f5251d21bda419902125ffc5422a785428e5d174e94dcefbe2</hash>
+         <hash>4a4f0b92270af4267d217fab54b87d8aa7766aff8f1648d5b23895b067e2bd71</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\traps.c</file>
@@ -15398,7 +15398,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\interrupt_manager.c</file>
-         <hash>cdd097b063d665df9d479ae8b59c0b3fcc4b07e90071ba40e50c6d74fbc674a6</hash>
+         <hash>34b778860629988feee095ba676e2675177ecbbeda5317b5670a71844db18469</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\watchdog.h</file>
@@ -15406,7 +15406,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\master.c</file>
-         <hash>cda8d9d27f3423f893298d05bbcb6801fc0ce9fb3619ef98aa872f08e073b783</hash>
+         <hash>a482cf5f345583a4dc8b1ac54e1308bb5b5993f0a566c6a7efcd4b09a3bf4139</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\reset_types.h</file>

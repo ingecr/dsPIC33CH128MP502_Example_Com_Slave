@@ -95,6 +95,21 @@ typedef struct ProtocolA_DATA_STRUCT
     uint16_t    ProtocolA[1];
 
 } ProtocolA_DATA; 
+/** 
+   ProtocolB data structure
+
+  @Summary
+    Defines the data structure for ProtocolB.
+
+  @Description
+    This structure defines the data for ProtocolB.
+*/
+
+typedef struct ProtocolB_DATA_STRUCT
+{
+    uint16_t    ProtocolB[3];
+
+} ProtocolB_DATA; 
 
 /**
  Section: Interface Routines
@@ -431,6 +446,51 @@ bool MASTER_ProtocolAWrite(ProtocolA_DATA *pData);
 */
         
 void MASTER_ProtocolACallBack(void);
+/**
+  @Summary
+    Reads data from mailbox.
+
+  @Description
+    This routine reads data from mailbox.
+
+  @Preconditions
+    None.
+
+  @Returns
+    Returns a boolean.
+    true   -    successful read
+    false  -    unsuccessful read
+
+  @Param
+    *pData      - Pointer to an structure to store the read data
+
+  @Example 
+    Refer to MASTER_Initialize() for an example    
+*/
+        
+bool MASTER_ProtocolBRead(ProtocolB_DATA *pData);
+
+/**
+  @Summary
+    Callback for ProtocolB.
+
+  @Description
+    This routine is a callback for ProtocolB interrupt.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None
+
+  @Param
+    None
+
+  @Example 
+    None  
+*/
+        
+void MASTER_ProtocolBCallBack(void);
 
 
 

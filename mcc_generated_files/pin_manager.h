@@ -200,6 +200,152 @@
 
 */
 #define LED4_SetDigitalOutput() _TRISE1 = 0
+/**
+  @Summary
+    Sets the GPIO pin, RE4, high using LATE4.
+
+  @Description
+    Sets the GPIO pin, RE4, high using LATE4.
+
+  @Preconditions
+    The RE4 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RE4 high (1)
+    LED7_SetHigh();
+    </code>
+
+*/
+#define LED7_SetHigh()          _LATE4 = 1
+/**
+  @Summary
+    Sets the GPIO pin, RE4, low using LATE4.
+
+  @Description
+    Sets the GPIO pin, RE4, low using LATE4.
+
+  @Preconditions
+    The RE4 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RE4 low (0)
+    LED7_SetLow();
+    </code>
+
+*/
+#define LED7_SetLow()           _LATE4 = 0
+/**
+  @Summary
+    Toggles the GPIO pin, RE4, using LATE4.
+
+  @Description
+    Toggles the GPIO pin, RE4, using LATE4.
+
+  @Preconditions
+    The RE4 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Toggle RE4
+    LED7_Toggle();
+    </code>
+
+*/
+#define LED7_Toggle()           _LATE4 ^= 1
+/**
+  @Summary
+    Reads the value of the GPIO pin, RE4.
+
+  @Description
+    Reads the value of the GPIO pin, RE4.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    uint16_t portValue;
+
+    // Read RE4
+    postValue = LED7_GetValue();
+    </code>
+
+*/
+#define LED7_GetValue()         _RE4
+/**
+  @Summary
+    Configures the GPIO pin, RE4, as an input.
+
+  @Description
+    Configures the GPIO pin, RE4, as an input.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RE4 as an input
+    LED7_SetDigitalInput();
+    </code>
+
+*/
+#define LED7_SetDigitalInput()  _TRISE4 = 1
+/**
+  @Summary
+    Configures the GPIO pin, RE4, as an output.
+
+  @Description
+    Configures the GPIO pin, RE4, as an output.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RE4 as an output
+    LED7_SetDigitalOutput();
+    </code>
+
+*/
+#define LED7_SetDigitalOutput() _TRISE4 = 0
 
 /**
     Section: Function Prototypes

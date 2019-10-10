@@ -51,6 +51,8 @@
 
 inline static bool MASTER_ProtocolAIsFull();
 inline static bool MASTER_ProtocolAIsEmpty();
+inline static bool MASTER_ProtocolBIsFull();
+inline static bool MASTER_ProtocolBIsEmpty();
 
 
 /**
@@ -66,6 +68,10 @@ void MASTER_Initialize()
     IFS8bits.MSIAIF = 0;	
     //ProtocolA Interrupt Enable
     IEC8bits.MSIAIE = 1;
+    //ProtocolB Interrupt Flag Clear
+    IFS8bits.MSIBIF = 0;	
+    //ProtocolB Interrupt Enable
+    IEC8bits.MSIBIE = 1;
 
 }
 
@@ -201,6 +207,44 @@ inline static bool MASTER_ProtocolAIsFull()
 inline static bool MASTER_ProtocolAIsEmpty()
 {
     return (!SI1MBXSbits.DTRDYA);
+}
+bool MASTER_ProtocolBRead(ProtocolB_DATA *pData)
+{
+    bool status = false;    
+    if(MASTER_ProtocolBIsFull())
+    {
+        pData->ProtocolB[0] = SI1MBX1D;
+        pData->ProtocolB[1] = SI1MBX2D;
+        pData->ProtocolB[2] = SI1MBX3D;
+
+        status = true;
+    }
+    else
+    {
+        status = false;
+    }
+    return status;
+}
+
+void __attribute__ ((interrupt, no_auto_psv)) _MSIBInterrupt(void)
+{
+    MASTER_ProtocolBCallBack();
+    IFS8bits.MSIBIF=0;
+}
+
+void __attribute__ ((weak)) MASTER_ProtocolBCallBack(void)
+{
+    // Add your custom callback code here
+}
+
+inline static bool MASTER_ProtocolBIsFull()
+{
+    return (SI1MBXSbits.DTRDYB);
+}
+
+inline static bool MASTER_ProtocolBIsEmpty()
+{
+    return (!SI1MBXSbits.DTRDYB);
 }
 
 
