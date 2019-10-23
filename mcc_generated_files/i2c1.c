@@ -115,7 +115,7 @@ static I2C_SLAVE_STATES   i2c1_slave_state;
 static uint8_t            *p_i2c1_write_pointer;
 static uint8_t            *p_i2c1_read_pointer;
 
-    static uint8_t EMULATE_EEPROM_Memory[EMULATE_EEPROM_SIZE] =
+     uint8_t EMULATE_EEPROM_Memory[EMULATE_EEPROM_SIZE] =
             {
                 0x01, 0x02, 0x03, 0x04, 0x05 , 0x06
             };

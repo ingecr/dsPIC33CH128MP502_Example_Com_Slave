@@ -69,6 +69,14 @@ int main(void)
  
     //Mailbox read    
     MASTER_ProtocolBRead((ProtocolB_DATA*)&dataReceive);
+    dataSend.ProtocolA[0] = dataReceive.ProtocolB[0] & 0x00FF;
+    
+    write_Data_Memory(0 , (dataReceive.ProtocolB[0] & 0x00FF) );
+    write_Data_Memory(1 , (dataReceive.ProtocolB[0] >> 8)     );
+    write_Data_Memory(2 , (dataReceive.ProtocolB[1] & 0x00FF) );
+    write_Data_Memory(3 , (dataReceive.ProtocolB[1] >> 8)     );
+    write_Data_Memory(4 , (dataReceive.ProtocolB[2] & 0x00FF) );
+    write_Data_Memory(5 , (dataReceive.ProtocolB[2] >> 8)     );
     //Mailbox write 
     MASTER_ProtocolAWrite((ProtocolA_DATA*)&dataSend);
  
@@ -78,13 +86,6 @@ int main(void)
     MASTER_InterruptRequestComplete();
     while(MASTER_IsInterruptRequestAcknowledged());
     
-    uint8_t SlaveReadBuffer;
-    uint8_t SlaveWriteBuffer;
-
-    // initialize the location of the read buffer
-    I2C1_ReadPointerSet(SlaveReadBuffer);
-    // initialize the location of the write buffer
-    I2C1_WritePointerSet(SlaveWriteBuffer);
     
     
     while (1)
@@ -94,7 +95,7 @@ int main(void)
         while(MASTER_IsInterruptRequested());
         MASTER_ProtocolBRead((ProtocolB_DATA*)&dataReceive);
         MASTER_InterruptRequestAcknowledgeComplete();  
-        write_Data_Memory(1 ,  dataReceive.ProtocolB[0] );
+        write_Data_Memory(1 ,  dataReceive.ProtocolB[0] >> 8);
         write_Data_Memory(2 , (dataReceive.ProtocolB[1] & 0x00FF) );
         write_Data_Memory(3 , (dataReceive.ProtocolB[1] >> 8) );
         write_Data_Memory(4 , (dataReceive.ProtocolB[2] & 0x00FF) );

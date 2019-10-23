@@ -9,12 +9,12 @@
          <string>class com.microchip.mcc.mcu16.mainManager.MainManager</string>
       </entry>
       <entry>
-         <string>Pin Module</string>
-         <string>class com.microchip.mcc.mcu16.pinManager.PinManager</string>
-      </entry>
-      <entry>
          <string>WATCHDOG</string>
          <string>class com.microchip.mcc.mcu16.systemManager.wdt.Wdt</string>
+      </entry>
+      <entry>
+         <string>Pin Module</string>
+         <string>class com.microchip.mcc.mcu16.pinManager.PinManager</string>
       </entry>
       <entry>
          <string>SLAVE INTERNAL OSCILLATOR</string>
@@ -29,12 +29,12 @@
          <string>class com.microchip.mcc.mcu16.systemManager.icd.Icd</string>
       </entry>
       <entry>
-         <string>Interrupt Module</string>
-         <string>class com.microchip.mcc.mcu16.interruptManager_dsPIC.InterruptManager_dsPIC</string>
-      </entry>
-      <entry>
          <string>SLAVE WATCHDOG</string>
          <string>class com.microchip.mcc.mcu16.modules.slave_core_wdt.SlaveCoreWDT</string>
+      </entry>
+      <entry>
+         <string>Interrupt Module</string>
+         <string>class com.microchip.mcc.mcu16.interruptManager_dsPIC.InterruptManager_dsPIC</string>
       </entry>
       <entry>
          <string>System Module</string>
@@ -408,7 +408,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR1" name="inputMode"/>
-         <value>periodMode</value>
+         <value>customTmrMode</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="iocUserSet RD3"/>
@@ -4176,7 +4176,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RE4"/>
-         <value>output</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RE3"/>
@@ -4456,7 +4456,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="TRISE"/>
-         <value>65517</value>
+         <value>65533</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name VDD1A"/>
@@ -7016,7 +7016,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="customNameUserSet RE4"/>
-         <value>enabled</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="customNameUserSet RE5"/>
@@ -9308,7 +9308,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="TRISE" settingAlias="TRISE4"/>
-         <value>output</value>
+         <value>input</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="FeatureClockSource"/>
@@ -13464,7 +13464,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSI" name="Slave Reset"/>
-         <value>enabled</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="CNEN0C" settingAlias="CNIE0C7" alias="disabled"/>
@@ -13516,7 +13516,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RE4"/>
-         <value>LED7</value>
+         <value/>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="CNEN0C" settingAlias="CNIE0C8" alias="disabled"/>
@@ -15309,12 +15309,12 @@
    </tokenMap>
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
-         <file>mcc_generated_files\interrupt_manager.h</file>
-         <hash>4d77fa4c18b7950ba78645935d538f50812167841471579dcd271d2d3f00c891</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\master.h</file>
          <hash>32c5d491666f0021b62b04e5cffb82817e42715303c2e5809f14161ad559d1d1</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\interrupt_manager.h</file>
+         <hash>4d77fa4c18b7950ba78645935d538f50812167841471579dcd271d2d3f00c891</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\i2c1.c</file>
@@ -15338,7 +15338,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\system.c</file>
-         <hash>14ed8385601c4e843400c7ab657a09ecb600c43fad69507b350744fad8582422</hash>
+         <hash>f0db7d79952d782f1a4cafa4f07b7d278cb083e0f16460ef7672a03a1083d28a</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\delay.h</file>
@@ -15358,7 +15358,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.h</file>
-         <hash>a5df31b3a1809462945267b8a2e3996b25b6753604b50a1915badc71a1d33009</hash>
+         <hash>b1c21939fc3ec98d347ab7cc8b0f5cdb5eb27a872a78d656ada4ca5c68bf6596</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\reset.c</file>
@@ -15378,7 +15378,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.h</file>
-         <hash>781c64aa86552b9f7d47dd7979685baa0e49b03687d08635ed1442a01e92a6e7</hash>
+         <hash>da7507b5312ce175a70ac049b421b2dfb896d648c2f66ad0a3e77d473b3b0935</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\tmr1.c</file>
@@ -15386,7 +15386,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>
-         <hash>4a4f0b92270af4267d217fab54b87d8aa7766aff8f1648d5b23895b067e2bd71</hash>
+         <hash>543629e7c8f461f5251d21bda419902125ffc5422a785428e5d174e94dcefbe2</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\traps.c</file>
